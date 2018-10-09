@@ -75,7 +75,6 @@ public:
     am_Error_e changeSinkAvailabilityDB(const am_Availability_s& availability, const am_sinkID_t sinkID);
     am_Error_e changDomainStateDB(const am_DomainState_e domainState, const am_domainID_t domainID);
     am_Error_e changeSinkMuteStateDB(const am_MuteState_e muteState, const am_sinkID_t sinkID);
-    am_Error_e changeSourceMuteStateDB(const am_MuteState_e muteState, const am_sourceID_t sourceID);
     am_Error_e changeMainSinkSoundPropertyDB(const am_MainSoundProperty_s& soundProperty, const am_sinkID_t sinkID);
     am_Error_e changeMainSourceSoundPropertyDB(const am_MainSoundProperty_s& soundProperty, const am_sourceID_t sourceID);
     am_Error_e changeSourceAvailabilityDB(const am_Availability_s& availability, const am_sourceID_t sourceID);

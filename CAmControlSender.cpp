@@ -221,12 +221,6 @@ am_Error_e CAmControlSender::hookUserSetSinkMuteState(const am_sinkID_t sinkID, 
     return (mController->hookUserSetSinkMuteState(sinkID, muteState));
 }
 
-am_Error_e CAmControlSender::hookUsersetSourceMuteState(const am_sourceID_t sourceID, const am_MuteState_e muteState)
-{
-    assert(mController);
-    return (mController->hookUsersetSourceMuteState(sourceID, muteState));
-}
-
 am_Error_e CAmControlSender::hookSystemRegisterDomain(const am_Domain_s & domainData, am_domainID_t & domainID)
 {
     assert(mController);

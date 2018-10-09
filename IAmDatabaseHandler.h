@@ -78,7 +78,6 @@ public:
     virtual am_Error_e changeSinkAvailabilityDB(const am_Availability_s& availability, const am_sinkID_t sinkID) = 0;
     virtual am_Error_e changeDomainStateDB(const am_DomainState_e domainState, const am_domainID_t domainID) = 0;
     virtual am_Error_e changeSinkMuteStateDB(const am_MuteState_e muteState, const am_sinkID_t sinkID) = 0;
-    virtual am_Error_e changeSourceMuteStateDB(const am_MuteState_e muteState, const am_sourceID_t sourceID) = 0;
     virtual am_Error_e changeMainSinkSoundPropertyDB(const am_MainSoundProperty_s& soundProperty, const am_sinkID_t sinkID) = 0;
     virtual am_Error_e changeMainSourceSoundPropertyDB(const am_MainSoundProperty_s& soundProperty, const am_sourceID_t sourceID) = 0;
     virtual am_Error_e changeSourceSoundPropertyDB(const am_SoundProperty_s& soundProperty, const am_sourceID_t sourceID) = 0;

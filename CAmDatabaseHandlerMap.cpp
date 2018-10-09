@@ -1397,36 +1397,11 @@ am_Error_e CAmDatabaseHandlerMap::changeSinkMuteStateDB(const am_MuteState_e mut
     DB_COND_UPDATE_RIE(mMappedData.mSinkMap[sinkID].muteState, muteState);
 
     logVerbose("DatabaseHandler::changeSinkMuteStateDB changed sinkMuteState of sink:", sinkID, "to:", muteState);
-    logError("DatabaseHandler::changeSinkMuteStateDB changed sinkMuteState of sink:", sinkID, "to:", muteState);
+
     NOTIFY_OBSERVERS2(dboSinkMuteStateChanged, sinkID, muteState)
 
     return (E_OK);
 }
-
-am_Error_e CAmDatabaseHandlerMap::changeSourceMuteStateDB(const am_MuteState_e muteState, const am_sourceID_t sourceID)
-{
-
-    if(!(muteState>=MS_UNKNOWN && muteState<=MS_MAX))
-    {
-    	logError(__METHOD_NAME__,"muteState must be valid");
-    	return (E_NOT_POSSIBLE);
-    }
-
-    if (!existSource(sourceID))
-    {
-	logError(__METHOD_NAME__,"sourceID must exist");        
-	return (E_NON_EXISTENT);
-    }
-
-  //  DB_COND_UPDATE_RIE(mMappedData.mSourceMap[sourceID].muteState, muteState); 
-
-    logVerbose("DatabaseHandler::changeSourceMuteStateDB changed sourceMuteState of source:", sourceID, "to:", muteState);
-
-    NOTIFY_OBSERVERS2(dboSourceMuteStateChanged, sourceID, muteState)
-
-    return (E_OK);
-}
-
 
 am_Error_e CAmDatabaseHandlerMap::changeMainSinkSoundPropertyDB(const am_MainSoundProperty_s & soundProperty, const am_sinkID_t sinkID)
 {
