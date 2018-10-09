@@ -100,12 +100,6 @@ public:
 	 */
 	virtual am_Error_e setSinkMuteState(const am_sinkID_t sinkID, const am_MuteState_e muteState) =0;
 	/**
-	 * sets the mute state of a source
-	 * @return E_OK on success, E_UNKNOWN on error. If the mute state is already the
-	 * desired one, the Daemon will return E_OK.
-	 */
-	virtual am_Error_e setSourceMuteState(const am_sourceID_t sourceID, const am_MuteState_e muteState) =0;
-	/**
 	 * This method is used to set sound properties, e.g. Equalizer Values. Since the
 	 * capabilities of the system can differ, the exact key value pairs can be
 	 * extended in each product
@@ -347,10 +341,6 @@ public:
 	 * this callback indicates a mute state change on a sink.
 	 */
 	virtual void cbSinkMuteStateChanged(const am_sinkID_t sinkID, const am_MuteState_e muteState) =0;
-	/**
-	 * this callback indicates a mute state change on a sink.
-	 */
-	virtual void cbSourceMuteStateChanged(const am_sourceID_t sourceID, const am_MuteState_e muteState) =0;
 	/**
 	 * is fired if a systemProperty changed
 	 */

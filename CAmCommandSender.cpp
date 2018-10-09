@@ -129,9 +129,6 @@ CAmCommandSender::CAmCommandSender(const std::vector<std::string>& listOfPluginD
     dboSinkMuteStateChanged = [&](const am_sinkID_t sinkID, const am_MuteState_e muteState) {
         mSerializer.asyncCall(this, &CAmCommandSender::cbSinkMuteStateChanged, sinkID, muteState);
     };
-    dboSourceMuteStateChanged = [&](const am_sourceID_t sourceID, const am_MuteState_e muteState) {
-        mSerializer.asyncCall(this, &CAmCommandSender::cbSourceMuteStateChanged, sourceID, muteState);
-    };
     dboSystemPropertyChanged = [&](const am_SystemProperty_s& SystemProperty) {
         mSerializer.asyncCall(this, &CAmCommandSender::cbSystemPropertyChanged, SystemProperty);
     };
@@ -327,12 +324,6 @@ void CAmCommandSender::cbSinkMuteStateChanged(const am_sinkID_t sinkID, const am
 {
     CALL_ALL_INTERFACES(cbSinkMuteStateChanged(sinkID,muteState))
 }
-
-void CAmCommandSender::cbSourceMuteStateChanged(const am_sourceID_t sourceID, const am_MuteState_e muteState)
-{
-    CALL_ALL_INTERFACES(cbSourceMuteStateChanged(sourceID,muteState))
-}
-
 
 void CAmCommandSender::cbSystemPropertyChanged(const am_SystemProperty_s & SystemProperty)
 {

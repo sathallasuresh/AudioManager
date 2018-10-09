@@ -55,7 +55,6 @@ public:
     am_Error_e hookUserVolumeChange(const am_sinkID_t SinkID, const am_mainVolume_t newVolume) ;
     am_Error_e hookUserVolumeStep(const am_sinkID_t SinkID, const int16_t increment) ;
     am_Error_e hookUserSetSinkMuteState(const am_sinkID_t sinkID, const am_MuteState_e muteState) ;
-    am_Error_e hookUsersetSourceMuteState(const am_sourceID_t sourceID, const am_MuteState_e muteState) ;
     am_Error_e hookSystemRegisterDomain(const am_Domain_s& domainData, am_domainID_t& domainID) ;
     am_Error_e hookSystemDeregisterDomain(const am_domainID_t domainID) ;
     void hookSystemDomainRegistrationComplete(const am_domainID_t domainID) ;

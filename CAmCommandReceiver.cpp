@@ -106,12 +106,6 @@ am_Error_e CAmCommandReceiver::setSinkMuteState(const am_sinkID_t sinkID, const 
     return (mControlSender->hookUserSetSinkMuteState(sinkID, muteState));
 }
 
-am_Error_e CAmCommandReceiver::setSourceMuteState(const am_sourceID_t sourceID, const am_MuteState_e muteState)
-{
-	logInfo(__METHOD_NAME__,"sourceID=", sourceID, "muteState=", muteState);
-    return (mControlSender->hookUsersetSourceMuteState(sourceID, muteState));
-}
-
 am_Error_e CAmCommandReceiver::setMainSinkSoundProperty(const am_MainSoundProperty_s & soundProperty, const am_sinkID_t sinkID)
 {
     logInfo(__METHOD_NAME__,"sinkID=", sinkID, "soundPropertyType=", soundProperty.type, "soundPropertyValue=", soundProperty.value);

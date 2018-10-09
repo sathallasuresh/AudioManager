@@ -66,7 +66,6 @@ public:
     void cbSourceAvailabilityChanged(const am_sourceID_t sourceID, const am_Availability_s& availability);
     void cbVolumeChanged(const am_sinkID_t sinkID, const am_mainVolume_t volume);
     void cbSinkMuteStateChanged(const am_sinkID_t sinkID, const am_MuteState_e muteState);
-    void cbSourceMuteStateChanged(const am_sourceID_t sourceID, const am_MuteState_e muteState);
     void cbSystemPropertyChanged(const am_SystemProperty_s& systemProperty);
     void cbTimingInformationChanged(const am_mainConnectionID_t mainConnectionID, const am_timeSync_t time);
     void getInterfaceVersion(std::string& version) const;

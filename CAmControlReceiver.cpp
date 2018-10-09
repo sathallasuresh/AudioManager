@@ -201,11 +201,6 @@ am_Error_e CAmControlReceiver::changeSinkMuteStateDB(const am_MuteState_e muteSt
     return (mDatabaseHandler->changeSinkMuteStateDB(muteState, sinkID));
 }
 
-am_Error_e CAmControlReceiver::changeSourceMuteStateDB(const am_MuteState_e muteState, const am_sourceID_t sourceID)
-{
-    return (mDatabaseHandler->changeSourceMuteStateDB(muteState, sourceID));
-}
-
 am_Error_e CAmControlReceiver::changeMainSinkSoundPropertyDB(const am_MainSoundProperty_s & soundProperty, const am_sinkID_t sinkID)
 {
     return (mDatabaseHandler->changeMainSinkSoundPropertyDB(soundProperty, sinkID));

@@ -296,12 +296,6 @@ public:
 	 */
 	virtual am_Error_e changeSinkMuteStateDB(const am_MuteState_e muteState, const am_sinkID_t sinkID) =0;
 	/**
-	 * changes the mute state of a source
-	 * @return E_OK on success, E_DATABASE_ERROR on error, E_NON_EXISTENT if source was
-	 * not found 
-	 */
-	virtual am_Error_e changeSourceMuteStateDB(const am_MuteState_e muteState, const am_sourceID_t sourceID) =0;
-	/**
 	 * changes the mainsinksoundproperty of a sink
 	 * @return E_OK on success, E_DATABASE_ERROR on error, E_NON_EXISTENT if sink was
 	 * not found
@@ -756,11 +750,6 @@ public:
 	 * @return E_OK on success, E_UNKNOWN on error
 	 */
 	virtual am_Error_e hookUserSetSinkMuteState(const am_sinkID_t sinkID, const am_MuteState_e muteState) =0;
-	/**
-	  * sets the mute state of a source
-	 * @return E_OK on success, E_UNKNOWN on error
-	 */
-	virtual am_Error_e hookUsersetSourceMuteState(const am_sourceID_t sourceID, const am_MuteState_e muteState) =0;
 	/**
 	 * is called when a routing adaptor registers its domain
 	 * @return E_OK on success, E_UNKNOWN on error, E_ALREADY_EXISTENT if already
